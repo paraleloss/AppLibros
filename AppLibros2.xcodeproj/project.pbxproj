@@ -30,7 +30,7 @@
 		C723BAC3279DF0ED006D641C /* LibroObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroObject.swift; sourceTree = "<group>"; };
 		C723BAC5279DFA47006D641C /* BibliotecaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliotecaTableViewCell.swift; sourceTree = "<group>"; };
 		C723BAC7279E4302006D641C /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
-		C75237E6279A76070077108F /* AppLibros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLibros.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75237E6279A76070077108F /* AppLibros2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLibros2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75237E9279A76070077108F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75237EB279A76070077108F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C75237ED279A76070077108F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		C75237E7279A76070077108F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C75237E6279A76070077108F /* AppLibros.app */,
+				C75237E6279A76070077108F /* AppLibros2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C75237E5279A76070077108F /* AppLibros */ = {
+		C75237E5279A76070077108F /* AppLibros2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C75237FA279A76090077108F /* Build configuration list for PBXNativeTarget "AppLibros" */;
+			buildConfigurationList = C75237FA279A76090077108F /* Build configuration list for PBXNativeTarget "AppLibros2" */;
 			buildPhases = (
 				C75237E2279A76070077108F /* Sources */,
 				C75237E3279A76070077108F /* Frameworks */,
@@ -132,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = AppLibros;
+			name = AppLibros2;
 			productName = AppLibros;
-			productReference = C75237E6279A76070077108F /* AppLibros.app */;
+			productReference = C75237E6279A76070077108F /* AppLibros2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C75237E1279A76070077108F /* Build configuration list for PBXProject "AppLibros" */;
+			buildConfigurationList = C75237E1279A76070077108F /* Build configuration list for PBXProject "AppLibros2" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C75237E5279A76070077108F /* AppLibros */,
+				C75237E5279A76070077108F /* AppLibros2 */,
 			);
 		};
 /* End PBXProject section */
@@ -329,6 +329,7 @@
 				DEVELOPMENT_TEAM = 7J58VMDCUU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppLibros/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppLibros2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,6 +358,7 @@
 				DEVELOPMENT_TEAM = 7J58VMDCUU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppLibros/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppLibros2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -378,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C75237E1279A76070077108F /* Build configuration list for PBXProject "AppLibros" */ = {
+		C75237E1279A76070077108F /* Build configuration list for PBXProject "AppLibros2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C75237F8279A76090077108F /* Debug */,
@@ -387,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C75237FA279A76090077108F /* Build configuration list for PBXNativeTarget "AppLibros" */ = {
+		C75237FA279A76090077108F /* Build configuration list for PBXNativeTarget "AppLibros2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C75237FB279A76090077108F /* Debug */,

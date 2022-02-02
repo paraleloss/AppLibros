@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  AppLibros
+//  AppLibros Versión 2.0
 //
-//  Created by Saúl Pérez on 20/01/22.
+//  Created by Saúl Pérez on 01/02/22.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initUI()
         view.backgroundColor = .systemGray5
-        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: false)
         viewWillDisappear(true)
     }
     
