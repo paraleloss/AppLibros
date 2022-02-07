@@ -7,15 +7,17 @@
 
 import UIKit
 
-
 struct CustomData {
     var title: String
     var url: String
     var backgroundImage: UIImage
 }
    
-class LibrosViewController: UIViewController {
-
+class LibrosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //var gBooks = [LibroData]()
+    let parser = LibroManager()
+    var libros = [VolumeInfo]()
     
     var topCollection: UICollectionView!
     var width = UIScreen.main.bounds.width
@@ -27,7 +29,7 @@ class LibrosViewController: UIViewController {
     let amarillo = UIColor(red: 244/255, green: 239/255, blue: 209/255, alpha: 1.00)
     
     var tableView : UITableView?
-    var dataSource : LibroObject?
+    //var dataSource : LibroObject?
     var tableLabel : UILabel?
     var holaLabel : UILabel?
     var sesionLabel : UILabel?
@@ -39,7 +41,6 @@ class LibrosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png"))
         view.backgroundColor = .systemGray5
         initUI()
     }
@@ -82,28 +83,38 @@ class LibrosViewController: UIViewController {
         //sesionLabel?.textAlignment = .left
         indicaLabel?.numberOfLines = 0
 
-        sesionLabel?.font = .boldSystemFont(ofSize: 54)
+        sesionLabel?.font = .boldSystemFont(ofSize: 30)
         view.addSubview(sesionLabel!)
         print(sesion)
         
         
         // Collection View de las images de los libros
         
-        
+
+
+
         
         tableView = UITableView(frame: CGRect(x: 10, y: height/3, width: width - 20, height: height - 250))
         tableView?.backgroundColor = .clear
         tableView?.layer.cornerRadius = 10
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        
-        //setupView()
-        view.addSubview(tableView!)
-        getData()
-     
-        
-    }
 
+        
+        parser.parse{
+            data in
+            self.libros = data
+            DispatchQueue.main.async {
+                print("Funciona")
+                self.tableView?.reloadData()
+            }
+        }
+        tableView?.dataSource = self
+        tableView?.delegate = self
+        view.addSubview(tableView!)
+
+     
+    }
+    
+/*
     func getData(){
 
         //libros
@@ -124,17 +135,9 @@ class LibrosViewController: UIViewController {
         dataSource = biblioteca
         tableView?.reloadData()
         
-/*        dataSoruce?.categorias = dataSoruce?.categorias?.filter({$0.nombre == "Desayuno"})
- */
     }
+*/
     
-    @objc func actionButton(){
-//        let lib = dataSource?.autor
-//        let vc = OpcionesViewController()
-//        vc.book = lib
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true, completion: nil)
-    }
     
     @objc func backAction(){
         print("De regreso")
@@ -143,18 +146,28 @@ class LibrosViewController: UIViewController {
 
 }
 
-extension LibrosViewController : UITableViewDataSource {
-  
+
+// MARK: - main table view
+
+extension LibrosViewController  {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 //dataSource?.libro?.count ?? 0
+        return libros.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let libroObj = dataSource?.libro?[indexPath.row]
-        let cell = BibliotecaTableViewCell(libro: libroObj!)
+        //let libroObj = dataSource?.libro?[indexPath.row]
+        //let cell = BibliotecaTableViewCell(libro: libroObj!)
+
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = libros[indexPath.row].title
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = "libro name : \(gBooks[indexPath.row].volumeInfo.title!)"
+//
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return height/4
     }
@@ -162,7 +175,7 @@ extension LibrosViewController : UITableViewDataSource {
 
 
 
-extension LibrosViewController : UITableViewDelegate{
+extension LibrosViewController {
 
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let view = UIView()
@@ -173,13 +186,13 @@ extension LibrosViewController : UITableViewDelegate{
         return 0.0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let lib = dataSource?.libro?[indexPath.row]
-        let vc = DetailBookViewController()
-        vc.book = lib
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let lib = dataSource?.libro?[indexPath.row]
+//        let vc = DetailBookViewController()
+//        vc.book = lib
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true, completion: nil)
+//    }
   
     func numberOfSections(in tableView: UITableView) -> Int {
         return  1

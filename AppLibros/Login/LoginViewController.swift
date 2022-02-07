@@ -113,21 +113,17 @@ class LoginViewController: UIViewController {
         let dbUser: [String: String] = appDelegate.dbUser
         var sesion = appDelegate.sesion
         
-//        dbUser.updateValue("pass", forKey: "usuario nuevo")
-//        appDelegate.dbUser = dbUser
         print(dbUser)
 
         let existeUser = dbUser[userText?.text ?? ""] != nil
-        //let coincide = dbUser
-        
-        //let pass = userDatabase[existeUser] != nil
         if existeUser && passText?.text ?? "" == dbUser[userText?.text ?? ""] {
                 print("usuario correcto")
                 sesion = userText?.text ?? ""
                 appDelegate.sesion = sesion
-                let alert = UIAlertController(title: "¡Bienvenido!", message: "", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: {_ in nextView()}))
-                self.present(alert, animated: true, completion: nil)
+                nextView()
+//                let alert = UIAlertController(title: "¡Bienvenido!", message: "", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: {_ in nextView()}))
+//                self.present(alert, animated: true, completion: nil)
                 
             }else{
                 print("usuario incorrecto")

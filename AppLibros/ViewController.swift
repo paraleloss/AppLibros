@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    let parser = LibroManager()
     var timer : Timer?
     var logoImage : UIImageView?
     var width = UIScreen.main.bounds.width
@@ -19,10 +19,12 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+       // parser.parse()
         initUI()
         view.backgroundColor = .systemGray5
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(ViewController.timerAction), userInfo: nil, repeats: false)
         viewWillDisappear(true)
+        
     }
     
     func initUI(){

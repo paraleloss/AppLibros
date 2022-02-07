@@ -15,6 +15,10 @@
 		C723BAC4279DF0EE006D641C /* LibroObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723BAC3279DF0ED006D641C /* LibroObject.swift */; };
 		C723BAC6279DFA47006D641C /* BibliotecaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723BAC5279DFA47006D641C /* BibliotecaTableViewCell.swift */; };
 		C723BAC8279E4302006D641C /* DetailBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723BAC7279E4302006D641C /* DetailBookViewController.swift */; };
+		C74534D827AE2AE600531EA9 /* LibroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74534D727AE2AE600531EA9 /* LibroModel.swift */; };
+		C74534DA27AE2CDD00531EA9 /* LibroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74534D927AE2CDD00531EA9 /* LibroData.swift */; };
+		C74534DC27AE517300531EA9 /* LibroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74534DB27AE517300531EA9 /* LibroManager.swift */; };
+		C74534DF27B0D5F400531EA9 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74534DE27B0D5F300531EA9 /* BookDetailViewController.swift */; };
 		C75237EA279A76070077108F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75237E9279A76070077108F /* AppDelegate.swift */; };
 		C75237EC279A76070077108F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75237EB279A76070077108F /* SceneDelegate.swift */; };
 		C75237EE279A76070077108F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75237ED279A76070077108F /* ViewController.swift */; };
@@ -30,6 +34,10 @@
 		C723BAC3279DF0ED006D641C /* LibroObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroObject.swift; sourceTree = "<group>"; };
 		C723BAC5279DFA47006D641C /* BibliotecaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliotecaTableViewCell.swift; sourceTree = "<group>"; };
 		C723BAC7279E4302006D641C /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
+		C74534D727AE2AE600531EA9 /* LibroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroModel.swift; sourceTree = "<group>"; };
+		C74534D927AE2CDD00531EA9 /* LibroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroData.swift; sourceTree = "<group>"; };
+		C74534DB27AE517300531EA9 /* LibroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroManager.swift; sourceTree = "<group>"; };
+		C74534DE27B0D5F300531EA9 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		C75237E6279A76070077108F /* AppLibros2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLibros2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75237E9279A76070077108F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75237EB279A76070077108F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,24 @@
 			path = Sigin;
 			sourceTree = "<group>";
 		};
+		C74534D627AE2AB700531EA9 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				C74534D727AE2AE600531EA9 /* LibroModel.swift */,
+				C74534D927AE2CDD00531EA9 /* LibroData.swift */,
+				C74534DB27AE517300531EA9 /* LibroManager.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		C74534DD27B0D59100531EA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C74534DE27B0D5F300531EA9 /* BookDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C75237DD279A76070077108F = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				C75237ED279A76070077108F /* ViewController.swift */,
+				C74534DD27B0D59100531EA9 /* Views */,
+				C74534D627AE2AB700531EA9 /* Modelo */,
 				C723BABE279DED51006D641C /* Libros */,
 				C723BABA279DD3C9006D641C /* Login */,
 				C723BACC279E9A88006D641C /* Sigin */,
@@ -191,10 +219,14 @@
 				C723BAC4279DF0EE006D641C /* LibroObject.swift in Sources */,
 				C723BAC8279E4302006D641C /* DetailBookViewController.swift in Sources */,
 				C723BAC0279DEE49006D641C /* LibrosViewController.swift in Sources */,
+				C74534DF27B0D5F400531EA9 /* BookDetailViewController.swift in Sources */,
 				C723BAB5279C86A0006D641C /* LoginViewController.swift in Sources */,
+				C74534DC27AE517300531EA9 /* LibroManager.swift in Sources */,
+				C74534D827AE2AE600531EA9 /* LibroModel.swift in Sources */,
 				C75237EE279A76070077108F /* ViewController.swift in Sources */,
 				C723BAC6279DFA47006D641C /* BibliotecaTableViewCell.swift in Sources */,
 				C75237EA279A76070077108F /* AppDelegate.swift in Sources */,
+				C74534DA27AE2CDD00531EA9 /* LibroData.swift in Sources */,
 				C723BAC2279DEE92006D641C /* SiginViewController.swift in Sources */,
 				C75237EC279A76070077108F /* SceneDelegate.swift in Sources */,
 			);
